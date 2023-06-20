@@ -1,7 +1,8 @@
 # Banco de Sangue
 
 ## Usuário para logar na aplicação:
-user: admin /n
+user: admin
+
 password: admin
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
