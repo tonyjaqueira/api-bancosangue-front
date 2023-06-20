@@ -1,0 +1,36 @@
+<div class="container background-login" >
+
+  <p-toast [style]="{marginTop: '80px'}"></p-toast>
+
+  <div class="login-box">
+    <div class="login-logo">
+      <a href="https://wktechnology.com.br/">
+        <img src="assets/images/Logo-02.png" class="logo-image">
+      </a>
+    </div>
+    <div class="login-box-body">
+      <p class="login-box-msg">Faça login para iniciar sua sessão</p>
+      <form autocomplete="off" #usuarioForm="ngForm" (ngSubmit)="logar(usuarioForm);">
+        <div class="form-group has-feedback ui-fluid">
+          <span class="ui-float-label">
+            <input id="float-input" type="text" pInputText [(ngModel)]="usuario.login" name="login" required minlength="3" maxlength="14" #login="ngModel"/>
+            <label for="float-input">Login</label>
+          </span>
+          <span class="fa fa-envelope form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback ui-fluid">
+          <span class="ui-float-label">
+            <input id="float-input-pass" type="password" pInputText [(ngModel)]="usuario.senha" name="senhaUsuario" required minlength="4" required #senha="ngModel"/>
+            <label for="float-input-pass">Senha</label>
+          </span>
+          <span class="fa fa-key form-control-feedback"></span>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 ui-fluid">
+            <button pButton type="submit" label="Entrar" [disabled]="!usuarioForm.valid"></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

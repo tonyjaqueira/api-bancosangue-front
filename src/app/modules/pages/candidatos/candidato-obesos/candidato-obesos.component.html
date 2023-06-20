@@ -1,0 +1,16 @@
+<section *ngIf="authService.verificarAcessoUsuario()" class="content-header">
+    <p-toast [style]="{marginTop: '30px'}"></p-toast>
+    <h1>
+      Candidados a Doação de Sangue
+    </h1>
+  </section>
+  
+  <section class="content">
+  
+    <p-panel header="Percentual de obesidade por gênero" [toggleable]="true" class="p-shadow-1">
+  
+        <p-chart type="pie" [data]="data"></p-chart>
+      
+    </p-panel>
+  
+  </section>

@@ -1,0 +1,17 @@
+<section *ngIf="authService.verificarAcessoUsuario()" class="content-header">
+    <p-toast [style]="{marginTop: '30px'}"></p-toast>
+    <h1>
+      Candidados a Doação de Sangue
+    </h1>
+  </section>
+  
+  <section class="content">
+  
+    <p-panel header="IMC Médio por Faixa Etária" [toggleable]="true" class="p-shadow-1">
+  
+        <p-chart type="bar" [data]="data"></p-chart>
+      
+    </p-panel>
+  
+  </section>
+  

@@ -1,0 +1,25 @@
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+
+    <!-- Sidebar Menu externo-->
+    <ul *ngIf="authService.verificarAcessoUsuario()" class="sidebar-menu" data-widget="tree">
+
+      <li style="margin-top: 3px; margin-bottom: 20px;" class="header ui-fluid">
+          <span>Candidatos a doadores</span>
+      </li>
+
+      <!-- Itens de Menu -->
+      <li (click)="candidatosPorEstado()"><a href="javascript:;"><img src="/assets/images/report.png" style="width: 24px; height: 24px;"/><span class="espaco-figura">Candidatos por Estado</span></a></li>
+      <li (click)="candidatosPorImcFaixaEtaria()"><a href="javascript:;"><img src="/assets/images/report.png" style="width: 24px; height: 24px;"/><span class="espaco-figura">IMC por faixa etária</span></a></li>
+      <li (click)="candidatosObesosPorGenero()"><a href="javascript:;"><img src="/assets/images/report.png" style="width: 24px; height: 24px;"/><span class="espaco-figura">Obesos por Gênero</span></a></li>
+      <li (click)="candidatosMediaIdadeTipoSanguineo()"><a href="javascript:;"><img src="/assets/images/report.png" style="width: 24px; height: 24px;"/><span class="espaco-figura">Média de idade por TS</span></a></li>
+      <li (click)="candidatosDoadoresTipoSanguineo()"><a href="javascript:;"><img src="/assets/images/report.png" style="width: 24px; height: 24px;"/><span class="espaco-figura">Doadores por TS</span></a></li>
+
+    </ul>
+
+  </section>
+
+</aside>
